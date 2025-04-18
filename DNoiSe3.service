@@ -1,0 +1,17 @@
+[Unit]
+Description=DNoiSe3 Service
+After=network-online.target pihole-FTL.service
+Wants=network-online.target pihole-FTL.service
+StartLimitIntervalSec=100
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStartPre=/bin/sleep 1
+ExecStart=/usr/bin/python3 /opt/DNoiSe/DNoiSe3.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
