@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-DNoiSe2.py: A script to monitor DNS queries from a Pi-hole server,
+DNoiSe3.py: A script to monitor DNS queries from a Pi-hole server,
 calculate query rates, and randomly resolve domains from a top 1M list.
 """
 
